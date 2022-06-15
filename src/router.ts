@@ -27,7 +27,13 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     alias: "/certificate",
     name: "certificate",
-    component: () => import("./components/Certificate/CertificateList.vue"),
+    component: () => import("./components/Certificate/CertificateList.vue")
+  },
+  {
+    path: "/",
+    alias: "/hourType",
+    name: "hourType",
+    component: () => import("./components/WorkHourType/WorkHourTypeList.vue")
   }
 ];
 

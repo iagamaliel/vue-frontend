@@ -9,6 +9,9 @@
         <li class="nav-item">
           <router-link to="/certificate" class="nav-link">Certificados</router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/hourType" class="nav-link">Tipos de Horarios</router-link>
+        </li>
       </div>
     </nav>
 

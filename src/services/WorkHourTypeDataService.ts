@@ -3,19 +3,19 @@ import http from "@/http-common";
 /* eslint-disable */
 class WorkHourTypeDataService {
   getAll(): Promise<any> {
-    return http.get("/workhourtype");
+    return http.get("/WorkHourType");
   }
 
   get(id: any): Promise<any> {
-    return http.get(`/workhourtype/${id}`);
+    return http.get(`/WorkHourType/${id}`);
   }
 
   create(data: any): Promise<any> {
-    return http.post("/workhourtype", data);
+    return http.post("/WorkHourType", data);
   }
 
   update(data: any): Promise<any> {
-    return http.put(`/workhourtype`, data);
+    return http.put(`/WorkHourType`, data);
   }
 }
 
