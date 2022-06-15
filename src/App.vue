@@ -12,6 +12,9 @@
         <li class="nav-item">
           <router-link to="/hourType" class="nav-link">Tipos de Horarios</router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/financialType" class="nav-link">Tipos de Financiera</router-link>
+        </li>
       </div>
     </nav>
 
