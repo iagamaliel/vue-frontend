@@ -34,13 +34,15 @@ const routes: Array<RouteRecordRaw> = [
     alias: "/hourType",
     name: "hourType",
     component: () => import("./components/WorkHourType/WorkHourTypeList.vue")
-  },
+  }
+  /*
   {
     path: "/",
     alias: "/financialType",
     name: "financialType",
     component: () => import("./components/FinancialType/FinancialTypeList.vue")
   }
+  */
 ];
 
 const router = createRouter({
