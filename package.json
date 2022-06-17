@@ -1,5 +1,5 @@
 {
-  "name": "BNB-Interbank-App",
+  "name": "interbank-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -34,5 +34,16 @@
     "prettier": "^2.2.1",
     "typescript": "~4.1.5",
     "vue-cli-plugin-vuetify": "~2.5.1"
-  }
+  },
+  "description": "```\r npm install\r ```",
+  "main": "1",
+  "repository": {
+    "type": "git",
+    "url": "1"
+  },
+  "keywords": [
+    "bnb"
+  ],
+  "author": "caleb salazar",
+  "license": "UNLICENSED"
 }
