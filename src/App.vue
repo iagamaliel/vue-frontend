@@ -4,9 +4,6 @@
       <router-link to="/" class="navbar-brand">BNB</router-link>
       <div class="navbar-nav mr-auto">
         <li class="nav-item">
-          <router-link to="/tutorials" class="nav-link">Tutorials</router-link>
-        </li>
-        <li class="nav-item">
           <router-link to="/certificate" class="nav-link">Certificados</router-link>
         </li>
         <li class="nav-item">
