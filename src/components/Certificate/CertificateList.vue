@@ -1,25 +1,7 @@
 
 <template>
   <div class="list row">
-    <div class="col-md-8">
-      <div class="input-group mb-3">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Search by title"
-          v-model="DepartmentName"
-        />
-        <div class="input-group-append">
-          <button
-            class="btn btn-outline-secondary"
-            type="button"
-            @click="searchTitle"
-          >
-            Search
-          </button>
-        </div>
-      </div>
-    </div>
+ 
     <div class="col-md-6">
       <!-- Btn Nuevo -->
       <router-link to="/addNew" class="nav-link">Nuevo</router-link>

@@ -60,19 +60,6 @@ export default defineComponent({
           console.log(e);
         });
     },
-
-    /*
-    deleteFinancialType() {
-      TutorialDataService.delete(this.currentFinancialType.id)
-        .then((response: ResponseData) => {
-          console.log(response.data);
-          this.$router.push({ name: "financialTypes" });
-        })
-        .catch((e: Error) => {
-          console.log(e);
-        });
-    },
-    */
   },
   mounted() {
     this.message = "";
