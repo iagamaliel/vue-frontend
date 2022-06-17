@@ -47,9 +47,8 @@ export default defineComponent({
           console.log(e);
         });
     },
-  },
 
-  updateFinancialType() {
+    updateFinancialType() {
     FinancialTypeDataService.update(this.currentFinancialType)
       .then((response: ResponseData) => {
         console.log(response.data);
@@ -59,8 +58,8 @@ export default defineComponent({
       .catch((e: Error) => {
         console.log(e);
       });
+    },
   },
-
   mounted() {
     this.message = "";
     this.getFinancialType(this.$route.params.id);
