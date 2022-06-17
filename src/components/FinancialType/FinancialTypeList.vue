@@ -76,6 +76,7 @@ export default defineComponent({
       this.currentFinancialType = financialType;
       this.currentIndex = index;
     },
+  },
 });
 </script>
 
