@@ -42,6 +42,12 @@ const routes: Array<RouteRecordRaw> = [
     name: "cycle",
     component: () => import("./components/Cycle/CycleList.vue")
   },
+  {
+    path: "/",
+    alias: "/addCycle",
+    name: "addCycle",
+    component: () => import("./components/Cycle/AddCycle.vue")
+  },
 ];
 
 const router = createRouter({
