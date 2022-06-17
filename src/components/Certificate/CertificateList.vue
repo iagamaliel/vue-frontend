@@ -61,6 +61,8 @@ import TutorialDataService from "@/services/TutorialDataService";
 import Tutorial from "@/types/Tutorial";
 import ResponseData from "@/types/ResponseData";
 
+console.log("CertificateDataService");
+
 export default defineComponent({
   name: "tutorials-list",
   data() {

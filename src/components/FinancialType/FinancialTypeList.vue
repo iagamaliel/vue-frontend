@@ -22,7 +22,7 @@
     </div>
     <div class="col-md-6">
       <!-- Btn Nuevo -->
-      <router-link to="/addNew" class="nav-link">Nuevo</router-link>
+      <router-link to="/addFinancialType" class="nav-link">Nuevo</router-link>
       <!-- end -->
       <h4>Tipos Financiera</h4>
       <ul class="list-group">
@@ -60,6 +60,8 @@ import { defineComponent } from "vue";
 import FinancialTypeDataService from "@/services/FinancialTypeDataService";
 import FinancialType from "@/types/FinancialType";
 import ResponseData from "@/types/ResponseData";
+
+console.log("FinancialTypeDataService");
 
 export default defineComponent({
   name: "FinancialType-list",

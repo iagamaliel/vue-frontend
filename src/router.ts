@@ -40,6 +40,12 @@ const routes: Array<RouteRecordRaw> = [
     alias: "/financialType",
     name: "financialType",
     component: () => import("./components/FinancialType/FinancialTypeList.vue")
+  },
+  {
+    path: "/",
+    alias: "/addFinancialType",
+    name: "addFinancialType",
+    component: () => import("./components/FinancialType/AddFinancialType.vue")
   }
 ];
 
