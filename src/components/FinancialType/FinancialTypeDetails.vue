@@ -1,6 +1,6 @@
 <template>
   <div class="edit-form">
-    <h4>Tutorial</h4>
+    <h4>Tipos de Financiera</h4>
     <form>
 
       <div class="form-group">
