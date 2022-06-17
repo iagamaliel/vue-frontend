@@ -48,6 +48,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "addCycle",
     component: () => import("./components/Cycle/AddCycle.vue")
   },
+  {
+    path: "/cycles/:id",
+    name: "cycles-details",
+    component: () => import("./components/Cycle/CycleDetails.vue"),
+  }
 ];
 
 const router = createRouter({
