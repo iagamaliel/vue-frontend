@@ -36,6 +36,12 @@ const routes: Array<RouteRecordRaw> = [
     name: "financialTypes-details",
     component: () => import("./components/FinancialType/FinancialTypeDetails.vue"),
   },
+  {
+    path: "/",
+    alias: "/cycle",
+    name: "cycle",
+    component: () => import("./components/Cycle/CycleList.vue")
+  },
 ];
 
 const router = createRouter({

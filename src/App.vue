@@ -9,6 +9,9 @@
         <li class="nav-item">
           <router-link to="/financialType" class="nav-link">Tipos de Financiera</router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/cycle" class="nav-link">Ciclos</router-link>
+        </li>
       </div>
     </nav>
 
