@@ -18,8 +18,8 @@
     </div>
 
     <div v-else>
-      <h4>You submitted successfully!</h4>
-      <button class="btn btn-success" @click="newFinancialType">Add</button>
+      <h4>¡Lo enviaste con éxito!</h4>
+      <button class="btn btn-success" @click="newFinancialType">Nuevo</button>
     </div>
   </div>
 </template>

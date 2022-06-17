@@ -4,33 +4,37 @@
  
     <div class="col-md-6">
       <!-- Btn Nuevo -->
-      <router-link to="/addNew" class="nav-link">Nuevo</router-link>
+      <router-link to="/addCertificate" class="nav-link">Nuevo</router-link>
       <!-- end -->
-      <h4>Listado de certificados</h4>
+      <h4>Certificados</h4>
       <ul class="list-group">
         <li
           class="list-group-item"
           :class="{ active: index == currentIndex }"
-          v-for="(tutorial, index) in tutorials"
+          v-for="(certificate, index) in certificates"
           :key="index"
-          @click="setActiveTutorial(tutorial, index)"
+          @click="setActiveCertificate(certificate, index)"
         >
-          {{ tutorial.DepartmentName }}
+          {{ certificate.serial_number }}
         </li>
       </ul>
     </div>
     <div class="col-md-6">
-      <div v-if="currentTutorial.DepartmentId">
-        <h4>Tutorial</h4>
+      <div v-if="currentCertificate.id">
+        <h4>Certificado</h4>
         <div>
-          <label><strong>Description:</strong></label>
-          {{ currentTutorial.DepartmentName }}
+          <label><strong>Serial Number:</strong></label>
+          {{ currentCertificate.serial_number }}
+        </div>
+        <div>
+          <label><strong>Asfi Code:</strong></label>
+          {{ currentCertificate.asfi_code }}
         </div>
 
         <router-link
-          :to="'/tutorials/' + currentTutorial.DepartmentId"
+          :to="'/certificates/' + currentCertificate.id"
           class="badge badge-warning"
-          >Edit</router-link
+          >Editar</router-link
         >
       </div>
     </div>
@@ -39,27 +43,28 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import TutorialDataService from "@/services/TutorialDataService";
-import Tutorial from "@/types/Tutorial";
+import CertificateDataService from "@/services/CertificateDataService";
+import Certificate from "@/types/Certificate";
 import ResponseData from "@/types/ResponseData";
 
 console.log("CertificateDataService");
 
 export default defineComponent({
-  name: "tutorials-list",
+  name: "certificates-list",
   data() {
     return {
-      tutorials: [] as Tutorial[],
-      currentTutorial: {} as Tutorial,
+      certificates: [] as Certificate[],
+      currentCertificate: {} as Certificate,
       currentIndex: -1,
-      DepartmentName: "",
+      asfi_code: "",
+      serial_number: ""
     };
   },
   methods: {
-    retrieveTutorials() {
-      TutorialDataService.getAll()
+    retrieveCertificates() {
+      CertificateDataService.getAll()
         .then((response: ResponseData) => {
-          this.tutorials = response.data;
+          this.certificates = response.data;
           console.log(response.data);
         })
         .catch((e: Error) => {
@@ -68,30 +73,18 @@ export default defineComponent({
     },
 
     refreshList() {
-      this.retrieveTutorials();
-      this.currentTutorial = {} as Tutorial;
+      this.retrieveCertificates();
+      this.currentCertificate = {} as Certificate;
       this.currentIndex = -1;
     },
 
-    setActiveTutorial(tutorial: Tutorial, index = -1) {
-      this.currentTutorial = tutorial;
+    setActiveCertificate(certificate: Certificate, index = -1) {
+      this.currentCertificate = certificate;
       this.currentIndex = index;
-    },
-
-    searchTitle() {
-      TutorialDataService.findByTitle(this.DepartmentName)
-        .then((response: ResponseData) => {
-          this.tutorials = response.data;
-          this.setActiveTutorial({} as Tutorial);
-          console.log(response.data);
-        })
-        .catch((e: Error) => {
-          console.log(e);
-        });
     },
   },
   mounted() {
-    this.retrieveTutorials();
+    this.retrieveCertificates();
   },
 });
 </script>

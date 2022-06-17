@@ -25,6 +25,12 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/",
+    alias: "/addCertificate",
+    name: "addCertificate",
+    component: () => import("./components/Certificate/AddCertificate.vue")
+  },
+  {
+    path: "/",
     alias: "/certificate",
     name: "certificate",
     component: () => import("./components/Certificate/CertificateList.vue")

@@ -1,22 +1,8 @@
 <template>
   <div class="edit-form">
     <h4>Tipo Financiera</h4>
-    <form>
+    <label class="form-control">{{ currentFinancialType.description }}</label>
 
-      <div class="form-group">
-        <label for="description">Descripción</label>
-        <input
-          type="text"
-          class="form-control"
-          id="description"
-          v-model="currentFinancialType.description"
-        />
-      </div>
-    </form>
-
-    <button type="submit" class="badge badge-success" @click="updateFinancialType">
-      Actualizar
-    </button>
     <p>{{ message }}</p>
   </div>
 
@@ -42,19 +28,6 @@ export default defineComponent({
         .then((response: ResponseData) => {
           this.currentFinancialType = response.data;
           console.log(response.data);
-        })
-        .catch((e: Error) => {
-          console.log(e);
-        });
-    },
-
-
-    updateFinancialType() {
-      FinancialTypeDataService.update(this.currentFinancialType)
-        .then((response: ResponseData) => {
-          console.log(response.data);
-          this.message = "The financial type was updated successfully!";
-            this.$router.push({ name: "financialTypes" });
         })
         .catch((e: Error) => {
           console.log(e);
