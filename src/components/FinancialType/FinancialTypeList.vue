@@ -93,24 +93,6 @@ export default defineComponent({
       this.currentFinancialType = financialType;
       this.currentIndex = index;
     },
-
-  /*
-    searchTitle() {
-      FinancialTypeDataService.findByTitle(this.description)
-        .then((response: ResponseData) => {
-          this.financialTypes = response.data;
-          this.setActiveFinancialType({} as FinancialType);
-          console.log(response.data);
-        })
-        .catch((e: Error) => {
-          console.log(e);
-        });
-    },
-  },
-  mounted() {
-    this.retrieveWourHourTypes();
-  },
-  */
 });
 </script>
 
