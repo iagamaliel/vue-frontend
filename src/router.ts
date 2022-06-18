@@ -38,6 +38,23 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/",
+    alias: "/channels",
+    name: "channels",
+    component: () => import("./components/Channels/ChannelsList.vue")
+  },
+  {
+    path: "/",
+    alias: "/addChannels",
+    name: "addChannels",
+    component: () => import("./components/Channels/AddChannels.vue")
+  },
+  {
+    path: "/channels/:id",
+    name: "channels-details",
+    component: () => import("./components/Channels/ChannelsDetails.vue")
+  },
+ {
+    path: "/",
     alias: "/cycle",
     name: "cycle",
     component: () => import("./components/Cycle/CycleList.vue")
@@ -51,7 +68,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/cycles/:id",
     name: "cycles-details",
-    component: () => import("./components/Cycle/CycleDetails.vue"),
+    component: () => import("./components/Cycle/CycleDetails.vue")
   }
 ];
 

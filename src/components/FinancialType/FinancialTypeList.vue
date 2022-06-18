@@ -77,6 +77,9 @@ export default defineComponent({
       this.currentIndex = index;
     },
   },
+  mounted() {
+    this.retrieveFinancialTypes();
+  },
 });
 </script>
 

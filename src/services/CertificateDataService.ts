@@ -11,7 +11,7 @@ class CertificateDataService {
   }
 
   create(data: any): Promise<any> {
-    return http.post("/certificate", data);
+    return http.post("/Certificate/CreateCertificate", data);
   }
 
   update(data: any): Promise<any> {
